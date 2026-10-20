@@ -1,77 +1,54 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b0b12">
-  <title>Video Player</title>
-  <style>
-    :root{color-scheme:dark;--bg:#0b0b12;--panel:#151520;--line:#2a2a3b;--muted:#aaaabd;--accent:#a78bfa}
-    *{box-sizing:border-box}
-    body{margin:0;background:radial-gradient(ellipse at top,#19152a 0,var(--bg) 55%);color:#f7f7fb;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;min-height:100vh}
-    header{height:68px;display:flex;align-items:center;padding:0 max(20px,calc((100% - 1080px)/2));border-bottom:1px solid var(--line);font-weight:800;letter-spacing:.4px}
-    header span{color:var(--accent);margin-left:5px}
-    main{width:min(1080px,calc(100% - 32px));margin:36px auto}
-    h1{font-size:clamp(24px,4vw,36px);margin:0 0 8px}
-    .muted{color:var(--muted);line-height:1.6}
-    .player{margin-top:22px;background:#000;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 18px 70px #0008}
-    .ratio{position:relative;width:100%;aspect-ratio:16/9}
-    iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
-    .panel{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 14px;border-radius:9px;border:1px solid #45455a;background:#20202d;color:#fff;text-decoration:none;font:inherit;cursor:pointer}
-    .btn.primary{background:#6d42cf;border-color:#6d42cf}
-    .small{font-size:13px;color:#9090a5;line-height:1.6}
-    footer{text-align:center;color:#7d7d91;font-size:12px;padding:26px}
-    @media(max-width:600px){main{margin:24px auto}.player{border-radius:10px}.panel{padding:14px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>PornGem Player</title>
+<style>
+:root{color-scheme:dark;--bg:#08090d;--panel:#12141c;--muted:#a5a9b8;--accent:#ff5b72}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#1a1b2a,#08090d 60%);color:#f4f5fa;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:1100px;margin:auto;padding:24px 16px 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}.brand{font-weight:800;letter-spacing:.08em}.tag{color:var(--muted);font-size:13px}
+h1{font-size:clamp(20px,3vw,30px);line-height:1.25;margin:0 0 8px}.desc{color:var(--muted);margin:0 0 20px}
+.player{position:relative;aspect-ratio:16/9;background:#000;border:1px solid #282b38;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px #0008}
+iframe{width:100%;height:100%;border:0;display:block}.poster{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px;background:linear-gradient(#0005,#000c),url('https://www.porngem.com/contents/videos_screenshots/444000/444482/preview.jpg') center/cover}
+.poster.show{display:flex}.poster p{max-width:520px;color:#e3e5ec}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+button,a.btn{appearance:none;border:1px solid #343848;border-radius:10px;padding:11px 15px;background:#191c27;color:#fff;text-decoration:none;font-weight:650;cursor:pointer}
+button.primary{background:var(--accent);border-color:var(--accent);color:#18070b}button:hover,a.btn:hover{filter:brightness(1.12)}
+.note{margin-top:18px;padding:14px 16px;background:var(--panel);border:1px solid #252938;border-radius:12px;color:var(--muted);font-size:14px}
+footer{margin-top:24px;color:#777d90;font-size:12px}
+@media(max-width:600px){.wrap{padding:16px 10px 32px}.player{border-radius:10px}.top{align-items:flex-start;flex-direction:column}}
+</style>
 </head>
 <body>
-  <header>MY<span>PLAYER</span></header>
-  <main>
-    <h1>Video Player</h1>
-    <p class="muted">Pemutar responsif untuk desktop dan perangkat mobile.</p>
-
-    <div class="player">
-      <div class="ratio">
-        <!-- Gunakan endpoint embed yang tercantum di halaman sumber. Pemutaran tetap bergantung pada izin dan dukungan PornGem. -->
-        <iframe
-          id="sourcePlayer"
-          src="https://www.porngem.com/embed/444482"
-          title="Video player dari situs sumber"
-          loading="lazy"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-          referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
-      </div>
+<main class="wrap">
+  <div class="top"><div class="brand">VIDEO PLAYER</div><div class="tag">Responsive · Vercel-ready</div></div>
+  <h1>Risky Sperm Hunting Adventure in the Wild Jungle (Hentai Anime)</h1>
+  <p class="desc">Sumber video: PornGem · ID 444482 · Durasi tercantum 8:19</p>
+  <section class="player" aria-label="Video player">
+    <iframe id="playerFrame" src="https://www.porngem.com/embed/444482" title="Video player" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <div class="poster" id="fallback">
+      <h2>Player tidak dapat dimuat</h2>
+      <p>Embed resmi mungkin dibatasi, membutuhkan sesi/cookie, atau alamatnya sudah tidak aktif. Coba muat ulang atau buka halaman sumber.</p>
+      <a class="btn primary" href="https://www.porngem.com/videos/risky-sperm-hunting-adventure-in-the-wild-jungle-hentai-anime-444482/" target="_blank" rel="noopener">Buka halaman sumber</a>
     </div>
-
-    <section class="panel" aria-live="polite">
-      <strong id="statusTitle">Mencoba membuka embed resmi…</strong>
-      <p class="muted" id="statusText">Jika player menampilkan “File not found”, halaman kosong, atau diblokir, kemungkinan endpoint tidak mengizinkan embedding pada domain ini.</p>
-      <div class="actions">
-        <a class="btn primary" href="https://www.porngem.com/videos/risky-sperm-hunting-adventure-in-the-wild-jungle-hentai-anime-444482/" target="_blank" rel="noopener noreferrer">Buka halaman sumber</a>
-        <button class="btn" id="reload" type="button">Muat ulang embed</button>
-      </div>
-      <p class="small">Catatan: file ini tidak mengekstrak, memperbarui, atau melewati token akses. Tidak ada API pembaruan token PornGem yang terverifikasi dari materi yang tersedia.</p>
-    </section>
-  </main>
-  <footer>MYPLAYER · External video embed</footer>
-  <script>
-    const frame = document.getElementById('sourcePlayer');
-    const title = document.getElementById('statusTitle');
-    const text = document.getElementById('statusText');
-    document.getElementById('reload').addEventListener('click', () => {
-      title.textContent = 'Memuat ulang embed…';
-      text.textContent = 'Jika masih gagal, gunakan halaman sumber atau dokumentasi resmi penyedia.';
-      frame.src = 'https://www.porngem.com/embed/444482';
-    });
-    // Iframe load events do not guarantee that the video itself is playable.
-    frame.addEventListener('load', () => {
-      title.textContent = 'Halaman embed selesai dimuat';
-      text.textContent = 'Ini belum memastikan video bisa diputar. Jika konten tidak tampil, server sumber mungkin menolak embedding.';
-    });
-  </script>
+  </section>
+  <div class="actions">
+    <button class="primary" id="reload">Muat ulang player</button>
+    <a class="btn" href="https://www.porngem.com/videos/risky-sperm-hunting-adventure-in-the-wild-jungle-hentai-anime-444482/" target="_blank" rel="noopener">Buka PornGem</a>
+  </div>
+  <div class="note"><strong>Catatan:</strong> File sumber berisi URL MP4 bertoken sementara dan konfigurasi player, tetapi tidak menunjukkan endpoint API resmi untuk memperbarui token. Karena itu, halaman ini memakai endpoint embed yang tercantum di sumber dan tidak mencoba membuat atau memalsukan token baru. Jika embed mengembalikan “File not found”, itu perlu diperbaiki oleh pihak sumber atau diganti dengan embed/API resmi yang masih aktif.</div>
+  <footer>Gunakan hanya untuk konten yang boleh Anda akses dan sematkan. Token video yang disalin dari HTML dapat kedaluwarsa.</footer>
+</main>
+<script>
+const frame=document.getElementById('playerFrame');
+const fallback=document.getElementById('fallback');
+document.getElementById('reload').addEventListener('click',()=>{
+  fallback.classList.remove('show');
+  frame.src='about:blank';
+  setTimeout(()=>{frame.src='https://www.porngem.com/embed/444482?reload='+Date.now()},80);
+});
+// Browsers do not expose iframe HTTP errors cross-origin; show fallback only if user chooses it manually.
+</script>
 </body>
 </html>
